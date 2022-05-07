@@ -1,0 +1,9 @@
+.element__like {
+    height: 35px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 16px 13px;
+    row-gap: 3px;
+    margin: 0;
+    padding: 0;
+}

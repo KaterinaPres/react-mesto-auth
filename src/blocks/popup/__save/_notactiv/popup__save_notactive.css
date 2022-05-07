@@ -1,0 +1,12 @@
+.popup__save_notactive {
+  background-color: #e5e5e5;
+  color: #000000;
+  border: 1px solid #000000;
+  opacity: 0.2;
+  cursor: default;
+}
+
+.popup__save_notactive:hover {
+  background-color: #e5e5e5;
+  cursor: default;
+}
