@@ -1,0 +1,4 @@
+.popup__label {
+    display: grid;
+    grid-template-rows: 27px 27px;
+}
