@@ -8,13 +8,10 @@ function PopupWithForm(props) {
         <button
           onClick={props.onClose}
           type="button"
-          className={`popup__close${props.name}`}
+          className="popup__close"
+          src={closeIcon}
+          alt="Закрытие попапа"
         >
-          <img
-            className="popup__close"
-            src={closeIcon}
-            alt="Закрытие попапа"
-          />
         </button>
         <h3 className={`popup__title popup__title_${props.name}`}>
           {props.title}
@@ -22,7 +19,7 @@ function PopupWithForm(props) {
         <form
           method="get"
           name={props.name}
-          className={`popup popup__${props.name}`}
+          className={`popup__${props.name}`}
           noValidate
         >
           {props.children}

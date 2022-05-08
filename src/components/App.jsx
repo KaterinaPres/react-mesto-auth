@@ -3,7 +3,7 @@ import Footer from "./Footer.jsx";
 import Header from "./Header.jsx";
 import Main from "./Main.jsx";
 import PopupWithForm from "./PopupWithForm.jsx";
-import ImagePopup from "./ImagePopup.jsx"; 
+import ImagePopup from "./ImagePopup.jsx";
 
 function App() {
   const [isEditProfilePopupOpen, setisEditProfilePopupOpen] = useState(false);
@@ -20,8 +20,8 @@ function App() {
   function handleAddPlaceClick() {
     setisAddPlacePopupOpen(!isAddPlacePopupOpen);
   }
-  function handleCardClick(cards) {
-    setSelectedCard(cards);
+  function handleCardClick(card) {
+    setSelectedCard(card);
   }
 
   function closePopups() {
@@ -32,7 +32,7 @@ function App() {
   }
 
   return (
-    <div className="page">
+    <div className="pages">
       <Header />
 
       <Main
@@ -44,14 +44,16 @@ function App() {
 
       <Footer />
 
-      {/* <!-- popup просмотра фото--> */}
-      <ImagePopup onClose={closePopups} card={selectedCard} />
+      {/* <!-- popup клика на фото--> */}
+      <ImagePopup
+        onClose={closePopups}
+        card={selectedCard} />
 
-      {/* popup редактирования профиля */}
+      {/* popup редактирования */}
       <PopupWithForm
         onClose={closePopups}
         isOpen={isEditProfilePopupOpen}
-        name="profil-edit"
+        name="popup-edit"
         title="Редактировать профиль"
         buttonText="Сохранить"
       >
@@ -112,7 +114,7 @@ function App() {
         </label>
       </PopupWithForm>
 
-      {/* popup форма добавления фото */}
+      {/* popup добавления фото */}
       <PopupWithForm
         onClose={closePopups}
         isOpen={isAddPlacePopupOpen}

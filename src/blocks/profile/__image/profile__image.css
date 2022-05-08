@@ -1,9 +1,13 @@
 .profile__image {
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
+
 .profile__image:hover {
   background: url(../../../images/pencil.png);
   background-position: center;
