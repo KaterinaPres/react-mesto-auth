@@ -5,17 +5,17 @@ import PopupWithForm from "./PopupWithForm";
 function EditAvatarPopup(props) {
     const linkRef = useRef();
 
-  useEffect(() => {
-    linkRef.current.value = "";
-  });
-
-  function handleSubmit(e) {
-    e.preventDefault();
-
-    props.onUpdateAvatar({
-      avatar: linkRef.current.value,
+    useEffect(() => {
+        linkRef.current.value = "";
     });
-  }
+
+    function handleSubmit(e) {
+        e.preventDefault();
+
+        props.onUpdateAvatar({
+            avatar: linkRef.current.value,
+        });
+    }
 
 
     return (

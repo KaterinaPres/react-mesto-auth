@@ -3,33 +3,33 @@ import PopupWithForm from "./PopupWithForm";
 import { CurrentUserContext } from "../contexts/CurrentUserContext.js";
 
 function EditProfilePopup(props) {
-  // Подписка на контекст
-  const currentUser = React.useContext(CurrentUserContext);
+    // Подписка на контекст
+    const currentUser = React.useContext(CurrentUserContext);
 
-  // После загрузки текущего пользователя из API
-  // его данные будут использованы в управляемых компонентах.
-  useEffect(() => {
-    setName(currentUser.name);
-    setDescription(currentUser.about);
-  }, [currentUser, props.isOpen]);
+    // После загрузки текущего пользователя из API
+    // его данные будут использованы в управляемых компонентах.
+    useEffect(() => {
+        setName(currentUser.name);
+        setDescription(currentUser.about);
+    }, [currentUser, props.isOpen]);
 
-  const [name, setName] = useState(" ");
-  const [description, setDescription] = useState(" ");
+    const [name, setName] = useState(" ");
+    const [description, setDescription] = useState(" ");
 
-  function handleChangeName(e) {
-    setName(e.target.value);
-  }
-  function handleChangeDescription(e) {
-    setDescription(e.target.value);
-  }
-    
-  function handleSubmit(e) {
-    e.preventDefault();
-    props.onUpdateUser({
-      name,
-      link: description,
-    });
-  }
+    function handleChangeName(e) {
+        setName(e.target.value);
+    }
+    function handleChangeDescription(e) {
+        setDescription(e.target.value);
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        props.onUpdateUser({
+            name,
+            link: description,
+        });
+    }
 
     return (
         <PopupWithForm
