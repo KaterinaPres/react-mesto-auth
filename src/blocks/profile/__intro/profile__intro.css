@@ -1,13 +1,13 @@
 .profile__intro {
   max-width: 336px;
-  margin: 26px auto 0 0;
+  margin: 26px auto 0 26px;
   padding: 0;
   display: grid;
   grid-column-start: 1;
   grid-column-end: 2;
   grid-template-columns: 294px 24px;
   grid-template-rows: 39px 18px;
-  row-gap: 16px;
+  row-gap: 20px;
   column-gap: 18px;
 }
 
