@@ -40,7 +40,7 @@ function EditProfilePopup(props) {
             title="Редактировать профиль"
             buttonText="Сохранить">
             <label className="popup__label">
-                <input value={name || ""}
+                <input value={name||""}
                     onChange={handleChangeName}
                     id="userName"
                     className="popup__item"
@@ -52,7 +52,7 @@ function EditProfilePopup(props) {
                 <span className="popup__message userName-error" />
             </label>
             <label className="popup__label">
-                <input value={description}
+                <input value={description||""}
                     onChange={handleChangeDescription}
                     id="about"
                     className="popup__item"
