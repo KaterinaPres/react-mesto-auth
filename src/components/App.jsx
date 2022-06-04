@@ -29,7 +29,7 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [tooltipStatus, setTooltipStatus] = useState({ url: "", title: "" });
   const [isInfoTooltipPopupOpen, setIsInfoTooltipPopupOpen] = useState(false);
-  const [userData, setUserData] = useState();
+  const [userData, setUserData] = useState({});
   const history = useHistory();
 
   useEffect(() => {
@@ -163,11 +163,11 @@ function App() {
       .then((data) => {
         if (data.token) {
           localStorage.setItem("token", data.token);
-
           tokenCheck();
         }
       })
       .catch((err) => {
+        setIsInfoTooltipPopupOpen(true);
         console.log(err);
       });
   };
@@ -177,8 +177,9 @@ function App() {
       let token = localStorage.getItem("token");
       mestoAuth.getContent(token).then((res) => {
         if (res) {
-          let userData = {
+          const userData = {
             email: res.data.email,
+            password: res.data.password,
           };
 
           setLoggedIn(true);

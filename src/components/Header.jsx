@@ -3,7 +3,7 @@ import logo from "../images/logo.svg";
 import { Link } from "react-router-dom";
 
 function Header(props) {
-  let { email } = props.userData || {};
+  const { email } = props.userData || {};
   return (
     <header className="header">
       <img className="header__logo" src={logo} alt="Логотип сайта" />
