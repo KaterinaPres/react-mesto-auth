@@ -7,7 +7,7 @@ function EditAvatarPopup(props) {
 
     useEffect(() => {
         if (props.isOpen) {
-        linkRef.current.value = "";
+            linkRef.current.value = "";
         }
     });
 
