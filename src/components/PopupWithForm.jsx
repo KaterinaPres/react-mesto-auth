@@ -8,7 +8,7 @@ function PopupWithForm(props) {
         <button
           onClick={props.onClose}
           type="button"
-          className="popup__close">
+          className={"popup__close"}>
           <img
             src={closeIcon}
             alt="Закрытие попапа"
